@@ -18,8 +18,11 @@ app.use(async (ctx, next) => {
   const start = Date.now();
   await next();
   // Test for latency
-  // ms = Date.now() - start;
-  ms = 40;
+
+  //Comment out one of the following lines:
+  ms = Date.now() - start;
+  // ms = 40;
+
   console.log(`Response Delay: ${ctx.method} ${ctx.url} - ${ms}`);
 });
 
