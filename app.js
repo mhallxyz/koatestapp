@@ -29,7 +29,7 @@ app.use(async (ctx, next) => {
 // response
 
   let latency = (time) => {
-    if (time <10) {
+    if (time < 10) {
       return {key: "123456789"}
     } else {
       return `Latency is too high to use this app. Last check ${ms}ms`
